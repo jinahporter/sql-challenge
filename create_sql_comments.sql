@@ -7,6 +7,10 @@ create table employees(
 	sex varchar(5) not null,
 	hire_date date);
 
+alter table employees rename emp_title_id TO title_id;
+
+select * from employees;
+
 create table dept_emp(
 	emp_no numeric references employees(emp_no),
 	dept_no varchar references departments(dept_no),
